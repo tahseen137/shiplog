@@ -73,7 +73,7 @@ export default function Dashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-semibold text-lg mb-1">Free Plan</h3>
-              <p className="text-slate-600">You're using {repos.length} of 1 repository</p>
+              <p className="text-slate-600">You&apos;re using {repos.length} of 1 repository</p>
             </div>
             <Link 
               href="/"

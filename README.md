@@ -3,18 +3,21 @@
 **AI-powered changelog generator—stop writing release notes, start shipping features**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-16.1-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tahseen137/shiplog)
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://shiplog-three.vercel.app)
+
+> **⚠️ Current Status:** This is a **UI/UX prototype** showcasing the design and user flow. Backend features (GitHub integration, AI generation, authentication) are not yet implemented. See [Roadmap](#roadmap) for planned features.
 
 ---
 
 ## 📖 About
 
-**ShipLog** automatically transforms your Git commits and pull requests into beautiful, customer-friendly release notes. Connect your GitHub repository and let AI turn technical commit messages into polished changelogs that your users will actually want to read.
+**ShipLog** will automatically transform your Git commits and pull requests into beautiful, customer-friendly release notes. Connect your GitHub repository and let AI turn technical commit messages into polished changelogs that your users will actually want to read.
 
-**Stop writing changelogs. Start shipping features.**
+**Vision:** Stop writing changelogs. Start shipping features.
 
-Perfect for:
+### Planned Use Cases
 - 🚀 SaaS products with frequent releases
 - 📱 Apps with regular updates
 - 🛠️ Developer tools and libraries
@@ -26,23 +29,24 @@ Perfect for:
 
 ## ✨ Features
 
-### AI Generation
-- 🤖 **Smart Categorization** — Automatically groups changes: Features, Fixes, Breaking Changes
-- 📝 **Natural Language** — Converts technical commits into user-friendly descriptions
-- 🎯 **Emoji Support** — Adds visual markers for different change types
-- 🔍 **PR Integration** — Pulls context from pull request descriptions
+### Current (Prototype)
+- ✅ **Modern UI/UX** — Beautiful, responsive design built with Next.js 16 and Tailwind CSS 4
+- ✅ **Landing Page** — Professional marketing site with pricing tiers
+- ✅ **Dashboard View** — Repository management interface
+- ✅ **Generator Interface** — Tone selection (Technical, Marketing, Casual)
+- ✅ **Public Changelog Pages** — Shareable release note display
+- ✅ **Mobile Responsive** — Works on all screen sizes
+- ✅ **Zero Build Errors** — Production-ready codebase
 
-### Changelog Features
-- 📄 **Public Pages** — Beautiful changelog.yourapp.com URLs
-- 🔗 **Shareable Links** — Direct links to specific releases
-- 📱 **Responsive Design** — Mobile-optimized reading experience
-- 📧 **Email Notifications** — Notify subscribers of new releases (Pro)
-
-### Developer Tools
-- 🔗 **GitHub Integration** — Automatic sync on new releases
-- 🎨 **Customizable Branding** — Add your logo, colors, and domain
-- 📊 **Analytics** — Track views and engagement (Pro)
-- 🔌 **API Access** — Embed changelog in your app
+### Planned (Roadmap)
+- 🔜 **GitHub OAuth** — Secure authentication and repository access
+- 🔜 **AI Generation** — Automated changelog creation from commits (GPT-4 or Claude)
+- 🔜 **Smart Categorization** — Auto-group changes: Features, Fixes, Breaking Changes
+- 🔜 **PR Integration** — Pull context from pull request descriptions
+- 🔜 **Database Persistence** — Save and manage changelog history
+- 🔜 **API Access** — Embed changelogs in your app
+- 🔜 **Email Notifications** — Notify subscribers of new releases
+- 🔜 **Custom Branding** — Add your logo, colors, and domain
 
 ---
 
@@ -51,10 +55,16 @@ Perfect for:
 | Layer | Technology |
 |-------|-----------|
 | **Framework** | Next.js 16 (App Router) |
-| **Language** | TypeScript |
+| **Language** | TypeScript 5 |
 | **Styling** | Tailwind CSS 4 |
 | **Icons** | Lucide React |
 | **Deployment** | Vercel |
+
+**Future Stack:**
+- **Auth:** NextAuth.js (GitHub OAuth)
+- **Database:** PostgreSQL (Supabase or Neon)
+- **AI:** OpenAI GPT-4 or Anthropic Claude
+- **Rate Limiting:** Upstash Redis
 
 ---
 
@@ -64,7 +74,6 @@ Perfect for:
 - Node.js 20+
 - npm or yarn
 - Git
-- GitHub account (for integration)
 
 ### Installation
 
@@ -75,6 +84,9 @@ cd shiplog
 
 # Install dependencies
 npm install
+
+# Copy environment variables (optional - not currently used)
+cp .env.example .env.local
 ```
 
 ### Development
@@ -86,41 +98,91 @@ npm run dev
 # Open http://localhost:3000
 ```
 
-### Build for Production
+### Build & Deploy
 
 ```bash
-# Build the application
+# Build for production
 npm run build
 
-# Start production server
+# Test production build locally
 npm start
+
+# Deploy to Vercel (one-click)
+vercel
 ```
 
----
-
-## 📦 Deployment
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tahseen137/shiplog)
+**Deploy with Vercel:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tahseen137/shiplog)
 
 ---
 
-## 🎯 Usage
+## 📸 Screenshots
 
-### Quick Start
+> Coming soon! For now, check out the [live demo](https://shiplog-three.vercel.app).
 
-1. **Connect GitHub**
-   - Sign in to ShipLog
-   - Connect your GitHub account
-   - Select a repository
+---
 
-2. **Generate Changelog**
-   - Click "Generate from Latest Release"
-   - AI analyzes commits and PRs
-   - Review and publish
+## 🗺️ Roadmap
 
-3. **Share**
-   - Get your public changelog URL
-   - Share with users or embed in your app
+### Phase 1: Foundation ✅ (Current)
+- [x] UI/UX design
+- [x] Landing page
+- [x] Dashboard mockup
+- [x] Changelog generator interface
+- [x] Public changelog display
+- [x] Responsive design
+
+### Phase 2: Backend (Next)
+- [ ] GitHub OAuth integration
+- [ ] Database setup (PostgreSQL)
+- [ ] API routes for CRUD operations
+- [ ] User authentication and sessions
+
+### Phase 3: AI Integration
+- [ ] OpenAI/Anthropic API integration
+- [ ] Commit message parsing
+- [ ] PR description extraction
+- [ ] Changelog generation with tone control
+
+### Phase 4: Advanced Features
+- [ ] Email notifications
+- [ ] Custom branding and domains
+- [ ] Analytics and engagement tracking
+- [ ] API for embedding changelogs
+
+### Phase 5: Polish
+- [ ] Unit and E2E tests
+- [ ] Error tracking (Sentry)
+- [ ] Performance monitoring
+- [ ] Documentation site
+
+---
+
+## 🎯 How It Will Work (When Complete)
+
+### 1. Connect GitHub
+```bash
+# User clicks "Connect GitHub"
+# OAuth flow → User authorizes ShipLog
+# Select repository from list
+```
+
+### 2. Generate Changelog
+```bash
+# ShipLog fetches latest commits and PRs
+# AI analyzes commit messages:
+#   - feat: add dark mode → ✨ New Feature
+#   - fix: login bug → 🐛 Bug Fix
+#   - perf: optimize DB → ⚡ Improvement
+# User selects tone (Technical, Marketing, Casual)
+# AI generates customer-friendly descriptions
+```
+
+### 3. Publish & Share
+```bash
+# One-click publish to public page
+# Get shareable URL: changelog.yourapp.com
+# Optional: Email subscribers automatically
+```
 
 ### Example Transformation
 
@@ -128,14 +190,14 @@ npm start
 ```
 feat: add dark mode support
 fix: login session timeout bug
-chore: update dependencies
+perf: optimize database queries
 docs: improve README
 ```
 
 #### Output (AI-Generated Changelog)
 ```markdown
 ## v2.1.0 - Enhanced User Experience
-Released on February 6, 2026
+Released on February 16, 2026
 
 ### ✨ Features
 - Added dark mode support with automatic system preference detection
@@ -144,85 +206,47 @@ Released on February 6, 2026
 - Fixed an issue where users were unexpectedly logged out after 30 minutes
 - Improved session management and reliability
 
-### 🔧 Improvements
-- Updated core dependencies for better performance and security
+### ⚡ Improvements
+- Optimized database queries for 40% faster page loads
 ```
 
 ---
 
-## 🔌 API Reference (Coming Soon)
+## 🔧 Configuration (Future)
 
-### `GET /api/changelog/[owner]/[repo]`
-Fetch changelog for a repository.
+When backend features are implemented, you'll need to configure:
 
-### `POST /api/generate`
-Generate new changelog entry from commits.
-
----
-
-## 🎨 Customization
-
-### Custom Branding
-```javascript
-{
-  "logo": "https://yourapp.com/logo.png",
-  "brandColor": "#4F46E5",
-  "customDomain": "changelog.yourapp.com"
-}
+```env
+# .env.local
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_secret
+OPENAI_API_KEY=your_openai_key
+DATABASE_URL=your_database_url
+NEXTAUTH_SECRET=your_secret
 ```
 
-### Emoji Mapping
-```javascript
-{
-  "feat": "✨",
-  "fix": "🐛",
-  "docs": "📝",
-  "perf": "⚡",
-  "refactor": "♻️"
-}
-```
-
----
-
-## 💡 Best Practices
-
-### Writing Good Commit Messages
-ShipLog works best with conventional commit messages:
-
-```bash
-# Good
-feat: add user profile page
-fix: resolve payment processing error
-docs: update API documentation
-
-# Better (with scope)
-feat(auth): add social login
-fix(checkout): handle expired coupons
-perf(api): optimize database queries
-```
-
-### Using PR Descriptions
-Add detailed descriptions to pull requests—ShipLog uses them for context:
-
-```markdown
-## What changed
-Added OAuth integration for Google and GitHub.
-
-## Why
-Users requested easier signup options.
-```
+See `.env.example` for full configuration options.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! This project is in early stages, so there's lots of room for improvement.
+
+### How to Contribute
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow existing code style (TypeScript, ESLint)
+- Add comments for complex logic
+- Update README if adding new features
+- Test locally before submitting PR
 
 ---
 
@@ -236,12 +260,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built with [Next.js](https://nextjs.org/)
 - Icons by [Lucide](https://lucide.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Deployed on [Vercel](https://vercel.com)
 
 ---
 
 ## 📧 Contact
 
-For questions or support, please open an issue on GitHub.
+For questions or feedback:
+- Open an issue on [GitHub](https://github.com/tahseen137/shiplog/issues)
+- Visit the [live demo](https://shiplog-three.vercel.app)
 
-**Ship features, not changelogs 🚀**
+---
+
+**🚀 Ship features, not changelogs**

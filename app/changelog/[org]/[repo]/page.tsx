@@ -118,7 +118,7 @@ export default async function PublicChangelog({ params }: PageProps) {
 
       {/* Hero */}
       <div className="mx-auto max-w-4xl px-6 py-12 text-center border-b border-slate-200">
-        <h2 className="text-4xl font-bold mb-4">What's New</h2>
+        <h2 className="text-4xl font-bold mb-4">What&apos;s New</h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           Stay up to date with the latest features, improvements, and fixes
         </p>

@@ -208,7 +208,7 @@ export default function Home() {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-4xl font-bold mb-4">Ready to automate your changelogs?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join developers who've saved hundreds of hours on release notes
+            Join developers who&apos;ve saved hundreds of hours on release notes
           </p>
           <Link 
             href="/dashboard"
